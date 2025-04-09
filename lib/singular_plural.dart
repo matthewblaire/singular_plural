@@ -1,4 +1,3 @@
-
 import 'src/implementation.dart';
 
 /// Converts a singular English word to its plural form.
