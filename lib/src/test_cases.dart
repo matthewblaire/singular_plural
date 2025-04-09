@@ -1,7 +1,3 @@
-int calculate() {
-  return 6 * 7;
-}
-
 final testCases = [
   // Regular plurals
   ['apple', 'apples'],
