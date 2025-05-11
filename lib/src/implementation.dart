@@ -44,7 +44,8 @@ String pluralizeImpl(String word) {
     return preserveCase(word, plural);
   }
   // Preserve original capitalization
-  bool isCapitalized = word.isNotEmpty && word[0].toUpperCase() == word[0];
+  // bool isCapitalized = word.isNotEmpty && word[0].toUpperCase() == word[0]; // not really used anymore
+
   // Check for pattern ending in "man" not in singularToPlural
   if (lowercaseWord.endsWith('man') &&
       !manExceptions.contains(lowercaseWord) &&
@@ -126,7 +127,8 @@ String singularizeImpl(String word) {
     }
   }
   // Preserve original capitalization
-  bool isCapitalized = word.isNotEmpty && word[0].toUpperCase() == word[0];
+  // bool isCapitalized = word.isNotEmpty && word[0].toUpperCase() == word[0]; // not really used anymore
+
   // Convert to lowercase for consistency in lookup
   String lowercaseWord = word.toLowerCase();
   // Check for words that are already singular
@@ -250,10 +252,9 @@ String preserveCase(String original, String modified) {
         original[originalIndex].toLowerCase() ==
             modified[modifiedIndex].toLowerCase()) {
       // If the characters match (ignoring case), copy the case from original
-      result +=
-          original[originalIndex].toUpperCase() == original[originalIndex]
-              ? modified[modifiedIndex].toUpperCase()
-              : modified[modifiedIndex].toLowerCase();
+      result += original[originalIndex].toUpperCase() == original[originalIndex]
+          ? modified[modifiedIndex].toUpperCase()
+          : modified[modifiedIndex].toLowerCase();
       originalIndex++;
       modifiedIndex++;
     } else {
