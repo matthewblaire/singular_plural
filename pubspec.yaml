@@ -1,8 +1,8 @@
 name: singular_plural
 description: A Dart package for converting English words between singular and plural forms
-version: 1.0.0
+version: 0.9.0
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.12.0 <4.0.0'
 
 dev_dependencies:
   test: ^1.24.0
